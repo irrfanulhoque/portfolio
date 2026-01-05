@@ -4,8 +4,66 @@ import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
 
 const Hero = () => {
+    // Vertical lines configuration (Data flow bottom to top)
+    const verticalLines = [
+        { left: '10%', duration: 2, delay: 0, opacity: 0.4 },
+        { left: '25%', duration: 3, delay: 1, opacity: 0.3 },
+        { left: '40%', duration: 1.5, delay: 2, opacity: 0.5 },
+        { left: '60%', duration: 2.5, delay: 1.5, opacity: 0.3 },
+        { left: '75%', duration: 2.2, delay: 0.5, opacity: 0.4 },
+        { left: '90%', duration: 2.8, delay: 2, opacity: 0.3 },
+    ];
+
+    // Horizontal lines configuration (Data flow left to right)
+    const horizontalLines = [
+        { top: '15%', duration: 2.5, delay: 0, opacity: 0.3 },
+        { top: '35%', duration: 3.2, delay: 1, opacity: 0.4 },
+        { top: '55%', duration: 2.2, delay: 0.5, opacity: 0.3 },
+        { top: '75%', duration: 2.8, delay: 1.5, opacity: 0.4 },
+        { top: '90%', duration: 3.5, delay: 0.8, opacity: 0.3 },
+    ];
+
     return (
-        <section className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+        <section className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden bg-dark">
+            {/* Background Moving Lines - Grid Effect */}
+            <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+                {/* Vertical Lines - Shorter "Beams" */}
+                {/* Moving Bottom to Top (top: 100% -> -40%) */}
+                {verticalLines.map((line, index) => (
+                    <motion.div
+                        key={`v-${index}`}
+                        className="absolute w-[2px] h-64 bg-gradient-to-t from-transparent via-cyan-400 to-transparent shadow-[0_0_8px_rgba(34,211,238,0.6)]"
+                        style={{ left: line.left, opacity: line.opacity }}
+                        initial={{ top: '100%' }}
+                        animate={{ top: '-40%' }}
+                        transition={{
+                            duration: line.duration,
+                            repeat: Infinity,
+                            ease: "linear",
+                            delay: line.delay,
+                        }}
+                    />
+                ))}
+
+                {/* Horizontal Lines - Shorter "Beams" */}
+                {/* Moving Left to Right (left: -40% -> 100%) */}
+                {horizontalLines.map((line, index) => (
+                    <motion.div
+                        key={`h-${index}`}
+                        className="absolute h-[2px] w-80 bg-gradient-to-r from-transparent via-blue-500 to-transparent shadow-[0_0_8px_rgba(59,130,246,0.6)]"
+                        style={{ top: line.top, opacity: line.opacity }}
+                        initial={{ left: '-20%' }}
+                        animate={{ left: '120%' }}
+                        transition={{
+                            duration: line.duration,
+                            repeat: Infinity,
+                            ease: "linear",
+                            delay: line.delay,
+                        }}
+                    />
+                ))}
+            </div>
+
             {/* Background Elements */}
             <motion.div
                 animate={{

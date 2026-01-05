@@ -48,3 +48,27 @@
     transform: scale(1);
   }
 }
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes neon-pulse {
+
+  0%,
+  100% {
+    text-shadow:
+      0 0 4px rgba(100, 255, 218, 0.5),
+      0 0 10px rgba(100, 255, 218, 0.3),
+      0 0 20px rgba(100, 255, 218, 0.1);
+  }
+
+  50% {
+    text-shadow:
+      0 0 4px rgba(100, 255, 218, 1),
+      0 0 15px rgba(100, 255, 218, 0.8),
+      0 0 30px rgba(100, 255, 218, 0.6);
+  }
+}
