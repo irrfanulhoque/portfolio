@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Github } from 'lucide-react';
+import { Mail, Linkedin, Github, Phone } from 'lucide-react';
 
 const Contact = () => {
     return (
@@ -28,9 +28,21 @@ const Contact = () => {
                         Say Hello
                     </a>
 
-                    <div className="mt-20 flex justify-center gap-8">
-                        <a href="#" className="text-slate-400 hover:text-accent transition-colors hover:-translate-y-1"><Github size={24} /></a>
-                        <a href="#" className="text-slate-400 hover:text-accent transition-colors hover:-translate-y-1"><Linkedin size={24} /></a>
+
+                    <div className="mt-8 flex flex-col items-center gap-4 text-slate-300">
+                        <div className="flex items-center gap-2">
+                            <Mail size={18} className="text-accent" />
+                            <span>irrfanulhoque@gmail.com</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <Phone size={18} className="text-accent" />
+                            <span>+880 1837011841</span>
+                        </div>
+                    </div>
+
+                    <div className="mt-12 flex justify-center gap-8">
+                        <a href="https://github.com/irrfanulhoque" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-accent transition-colors hover:-translate-y-1"><Github size={24} /></a>
+                        <a href="https://www.linkedin.com/in/irrfanulhoque" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-accent transition-colors hover:-translate-y-1"><Linkedin size={24} /></a>
                     </div>
                 </motion.div>
             </div>

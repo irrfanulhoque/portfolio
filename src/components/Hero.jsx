@@ -86,8 +86,8 @@ const Hero = () => {
                         </a>
 
                         <div className="flex items-center gap-6 md:ml-6 mt-4 md:mt-0">
-                            <a href="https://github.com/tahmid37" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-accent transition-colors hover:-translate-y-1"><Github size={24} /></a>
-                            <a href="#" className="text-slate-400 hover:text-accent transition-colors hover:-translate-y-1"><Linkedin size={24} /></a>
+                            <a href="https://github.com/irrfanulhoque" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-accent transition-colors hover:-translate-y-1"><Github size={24} /></a>
+                            <a href="https://www.linkedin.com/in/irrfanulhoque" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-accent transition-colors hover:-translate-y-1"><Linkedin size={24} /></a>
                             <a href="mailto:irrfanulhoque@gmail.com" className="text-slate-400 hover:text-accent transition-colors hover:-translate-y-1"><Mail size={24} /></a>
                         </div>
                     </motion.div>

@@ -46,8 +46,8 @@ const About = () => {
                             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded bg-accent/20 cursor-pointer">
                                 <div className="absolute inset-0 border-2 border-accent rounded translate-x-4 translate-y-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
                                 {/* Placeholder for profile image - using div for now */}
-                                <div className="absolute inset-0 bg-gray-800 rounded flex items-center justify-center overflow-hidden grayscale hover:grayscale-0 transition-all">
-                                    <span className="text-6xl">👨‍💻</span>
+                                <div className="absolute inset-0 bg-gray-800 rounded flex items-center justify-center overflow-hidden transition-all">
+                                    <img src="/Irfan-Photo.jpg" alt="Irfanul Hoque" className="w-full h-full object-cover" />
                                 </div>
                             </div>
                         </div>
