@@ -7,9 +7,7 @@ const Footer = () => {
             <div className="mb-2">
                 Designed & Built by Irfanul Hoque
             </div>
-            <div>
-                Inspired by Brittany Chiang & Tahmid Rahman
-            </div>
+
         </footer>
     );
 };
