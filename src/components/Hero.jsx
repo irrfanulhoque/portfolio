@@ -1,9 +1,37 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
 
 const Hero = () => {
+    const [displayedText, setDisplayedText] = useState('');
+    const [showCursor, setShowCursor] = useState(true);
+    const fullText = 'Irfanul Hoque.';
+
+    // Typewriter effect
+    useEffect(() => {
+        let currentIndex = 0;
+        const typingInterval = setInterval(() => {
+            if (currentIndex <= fullText.length) {
+                setDisplayedText(fullText.slice(0, currentIndex));
+                currentIndex++;
+            } else {
+                clearInterval(typingInterval);
+            }
+        }, 100); // 100ms per character
+
+        return () => clearInterval(typingInterval);
+    }, []);
+
+    // Cursor blinking effect
+    useEffect(() => {
+        const cursorInterval = setInterval(() => {
+            setShowCursor(prev => !prev);
+        }, 530); // Blink every 530ms
+
+        return () => clearInterval(cursorInterval);
+    }, []);
+
     // Vertical lines configuration (Data flow bottom to top)
     const verticalLines = [
         { left: '10%', duration: 2, delay: 0, opacity: 0.4 },
@@ -106,9 +134,10 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3, duration: 0.8 }}
-                        className="text-5xl md:text-7xl font-bold text-slate-100 mb-4"
+                        className="text-5xl md:text-7xl font-bold text-slate-100 mb-4 min-h-[4rem] md:min-h-[5rem]"
                     >
-                        Irfanul Hoque.
+                        {displayedText}
+                        <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}>|</span>
                     </motion.h1>
 
                     <motion.h2

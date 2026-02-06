@@ -63,7 +63,7 @@ const About = () => {
                             <motion.div
                                 whileHover={{ scale: 1.02 }}
                                 transition={{ duration: 0.3 }}
-                                className="relative w-64 h-64 md:w-80 md:h-80 rounded bg-accent/20 cursor-pointer"
+                                className="relative w-72 h-72 md:w-96 md:h-96 rounded bg-accent/20 cursor-pointer"
                             >
                                 <div className="absolute inset-0 border-2 border-accent rounded translate-x-4 translate-y-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
                                 {/* Image Container */}
