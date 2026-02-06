@@ -99,7 +99,7 @@ const Hero = () => {
                         transition={{ delay: 0.2 }}
                         className="text-accent text-lg mb-4 font-mono"
                     >
-                        Hi, my name is
+                        Hi, I am
                     </motion.p>
 
                     <motion.h1
@@ -117,7 +117,7 @@ const Hero = () => {
                         transition={{ delay: 0.4, duration: 0.8 }}
                         className="text-4xl md:text-6xl font-bold text-slate-400 mb-6"
                     >
-                        I build things for the web.
+                        I build reliable systems.
                     </motion.h2>
 
                     <motion.p
@@ -126,7 +126,7 @@ const Hero = () => {
                         transition={{ delay: 0.5 }}
                         className="text-slate-400 max-w-xl text-lg mb-8 md:mx-0 mx-auto"
                     >
-                        I am a Computer Science Graduate, Full Stack Developer, and Data Analyst specializing in building exceptional digital experiences. Currently focused on building accessible, human-centered products.
+                        A Computer Science graduate focused on turning data, testing, and systems into reliable, human-centered and real-world solutions—where accuracy matters.
                     </motion.p>
 
                     <motion.div

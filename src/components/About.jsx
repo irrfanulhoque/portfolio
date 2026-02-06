@@ -3,14 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const About = () => {
-    const technologies = [
-        'JavaScript (ES6+)',
-        'React',
-        'Node.js',
-        'TypeScript',
-        'Python',
-        'Tailwind CSS',
-    ];
+
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -53,30 +46,14 @@ const About = () => {
                     <div className="grid md:grid-cols-2 gap-12">
                         <div className="text-slate-400 space-y-4 text-lg">
                             <motion.p variants={itemVariants}>
-                                Hello! My name is Irfanul Hoque and I enjoy creating things that live on the internet. My interest in web development started back when I was exploring different technologies, and I've since developed a strong foundation in both frontend and backend development.
+                                Hello! I am Irfanul Hoque, a Computer Science graduate from BRAC University with a strong foundation in data analysis, software quality assurance, and full-stack systems. Through academic projects and hands-on experience, I have focused on building dependable software by analyzing data, validating business logic, and testing end-to-end user flows.
                             </motion.p>
                             <motion.p variants={itemVariants}>
-                                Fast-forward to today, I've had the privilege of working on various projects from <span className="text-accent">machine learning models</span> to <span className="text-accent">full-stack web applications</span>. My main focus these days is building accessible, inclusive products and digital experiences.
+                                I approach problems by understanding requirements deeply, validating data at every step, and ensuring systems behave as expected under real conditions. I have worked on API automation with Postman, end-to-end test automation using Playwright, performance testing with JMeter, and data-driven projects involving SQL, Python, and visualization tools. I enjoy identifying gaps early by uncovering data inconsistencies and breaking applications through thoughtful test scenarios. Beyond technical work, I value clear communication, thorough documentation, and effective collaboration, all of which I have developed through team projects and real-world experience in high-responsibility roles.
                             </motion.p>
                             <motion.p variants={itemVariants}>
-                                Here are a few technologies I've been working with recently:
+                                I am committed to building robust, reliable systems that translate strong technical foundations into practical solutions with real-world impact.
                             </motion.p>
-
-                            <motion.ul
-                                className="grid grid-cols-2 gap-2 mt-4 font-mono text-sm"
-                                variants={containerVariants}
-                            >
-                                {technologies.map((tech) => (
-                                    <motion.li
-                                        key={tech}
-                                        variants={itemVariants}
-                                        whileHover={{ x: 5, color: "#64ffda" }}
-                                        className="flex items-center transition-colors cursor-default"
-                                    >
-                                        <span className="text-accent mr-2">▹</span>{tech}
-                                    </motion.li>
-                                ))}
-                            </motion.ul>
                         </div>
 
                         <motion.div
